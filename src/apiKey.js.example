@@ -1,0 +1,3 @@
+const Key = "YourKeyHere";
+export default Key;
+// Please put your key in Key variable and rename the file to 'apiKey.js'
