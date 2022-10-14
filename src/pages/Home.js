@@ -29,7 +29,7 @@ export default function Home() {
       if (response.ok) {
         const data = await response.json();
         setSearchResult(data);
-        document.getElementById("ingredients").style.display = "none";
+        setIngredientsArray([]);
       } else {
         alert("couldnt receive data");
       }
@@ -39,7 +39,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="content">
       <div>
         <label>Add your ingredient</label>
         <input
@@ -74,7 +74,25 @@ export default function Home() {
         </ol>
         <ol>
           {searchResult.map((recipe) => (
-            <li key={recipe.id}>{recipe.title}</li>
+            <div>
+              <li key={recipe.id}>
+                <h3>{recipe.title}</h3>
+              </li>
+              <div>
+                <h3>The ingredients you have and are used in recipe:</h3>
+                {recipe.usedIngredients.map((usedIngredients) => (
+                  <div key={usedIngredients.id}>{usedIngredients.original}</div>
+                ))}
+
+                <h3>The ingredients you don't have and are used in recipe:</h3>
+                {recipe.missedIngredients.map((missedIngredients) => (
+                  <div key={missedIngredients.id}>
+                    {missedIngredients.original}
+                  </div>
+                ))}
+              </div>
+              <img src={recipe.image}></img>
+            </div>
           ))}
         </ol>
       </div>
