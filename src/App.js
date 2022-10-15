@@ -6,7 +6,8 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
-import NotFound from "./pages/NotFound";
+// import NotFound from "./pages/NotFound";
+import RecipeDetailed from "./pages/RecipeDetailed";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/recipe" element={<RecipeDetailed />} />
         </Routes>
       </div>
       <Footer />

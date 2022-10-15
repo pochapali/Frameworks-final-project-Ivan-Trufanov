@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Key from "./../apiKey";
+import key from "./../apiKey";
+import { Link } from "react-router-dom";
 export default function Home() {
   //here we have array with ingredients, I use this state for rendering the ingredients the user added.
   const [ingredientsArray, setIngredientsArray] = useState([]);
@@ -24,7 +25,7 @@ export default function Home() {
   }
   async function getRecipes(ingredients) {
     try {
-      const address = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&number=10&ignorePantry=true&apiKey=${Key}`;
+      const address = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&ranking=1&number=10&ignorePantry=true&apiKey=${key}`;
       const response = await fetch(address);
       if (response.ok) {
         const data = await response.json();
@@ -92,6 +93,11 @@ export default function Home() {
                 ))}
               </div>
               <img src={recipe.image}></img>
+
+              <Link to={"/recipe?id=" + recipe.id + "&title=" + recipe.title}>
+                {" "}
+                Check the Recipe!
+              </Link>
             </div>
           ))}
         </ol>
