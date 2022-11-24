@@ -1,3 +1,17 @@
+![alt text](https://github.com/pochapali/frameworks-final-project-Ivan-Trufanov/blob/main/README-pics/project_1.png?raw=true)
+
+![alt text](https://github.com/pochapali/frameworks-final-project-Ivan-Trufanov/blob/main/README-pics/project_2.png?raw=true)
+
+![alt text](https://github.com/pochapali/frameworks-final-project-Ivan-Trufanov/blob/main/README-pics/project_3.png?raw=true)
+
+![alt text](https://github.com/pochapali/frameworks-final-project-Ivan-Trufanov/blob/main/README-pics/project_4.png?raw=true)
+
+![alt text](https://github.com/pochapali/frameworks-final-project-Ivan-Trufanov/blob/main/README-pics/project_5.png?raw=true)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

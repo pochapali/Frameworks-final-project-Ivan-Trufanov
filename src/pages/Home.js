@@ -65,6 +65,14 @@ export default function Home() {
             <li key={ingredient}>{ingredient}</li>
           ))}
         </ol>
+        <button
+          type="button"
+          onClick={function () {
+            getRecipes(ingredients);
+          }}
+        >
+          Search!!
+        </button>
         <ol>
           {searchResult.map((recipe) => (
             <div>
@@ -93,14 +101,6 @@ export default function Home() {
             </div>
           ))}
         </ol>
-        <button
-          type="button"
-          onClick={function () {
-            getRecipes(ingredients);
-          }}
-        >
-          Search!!
-        </button>
       </div>
     </div>
   );
